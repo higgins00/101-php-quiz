@@ -4,7 +4,7 @@
 
 	$current_score = $_GET["current_score"];
 
-	if ($_GET["answer"] == $answers[5]) {
+	if ($_GET["answer"] == $answers[3]) {
 		$current_score += 1;
 	}
 
@@ -19,7 +19,7 @@
 
 	<div class="final-result">
 		<?php 
-			echo $username .", you've finished the quiz! Your final score is " . $current_score . " out of 5.";
+			echo "You've finished the quiz! Your final score is " . $current_score . " out of 4.";
 		?>
 	</div>
 

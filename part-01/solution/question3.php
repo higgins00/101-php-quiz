@@ -4,7 +4,7 @@
 
 	$current_score = $_GET["current_score"];
 
-	if ($_GET["answer"] == $answers[1]) {
+	if ($_GET["answer"] == $answers[2]) {
 		$current_score += 1;
 	}
 
@@ -19,12 +19,12 @@
 
 	<div class="score">
 		<?php 
-			echo "Your current score is " . $current_score;
+			echo $username . "'s current score is " . $current_score;
 		?>
 	</div>
 
 	<div class="question">
-		<?php echo $quiz[2]; ?>
+		<?php echo $quiz[3]; ?>
 	</div>
 
 	<div class="answer">

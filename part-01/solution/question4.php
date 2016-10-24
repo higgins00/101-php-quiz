@@ -4,7 +4,7 @@
 
 	$current_score = $_GET["current_score"];
 
-	if ($_GET["answer"] == $answers[2]) {
+	if ($_GET["answer"] == $answers[3]) {
 		$current_score += 1;
 	}
 
@@ -24,11 +24,11 @@
 	</div>
 
 	<div class="question">
-		<?php echo $quiz[3]; ?>
+		<?php echo $quiz[4]; ?>
 	</div>
 
 	<div class="answer">
-		<form action="finalresult.php">
+		<form action="question5.php">
 			<input type="radio" name="answer" value="A">A<br>
 			<input type="radio" name="answer" value="B">B<br>
 			<input type="radio" name="answer" value="C">C<br>

@@ -2,11 +2,14 @@
 
 	include 'quiz.php';
 
+	$user = $_GET['user'];
 	$current_score = 0;
 
 	if ($_GET["answer"] == $answers[1]) {
 		$current_score += 1;
 	}
+
+
 
 ?>
 
@@ -19,7 +22,7 @@
 
 	<div class="score">
 		<?php 
-			echo "Your current score is " . $current_score;
+			echo $user . ", your current score is " . $current_score;
 		?>
 	</div>
 
@@ -36,6 +39,7 @@
 			<input type="submit" value="Next Question">
 
 			<input type="hidden" name="current_score" value="<?php echo $current_score ; ?>">
+			<input type="hidden" name="user" value="<?php echo $user ; ?>">
 		</form>
 	</div>
 

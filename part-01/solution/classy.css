@@ -4,7 +4,7 @@ body, html{
   height: 100%;
   background: #78cfca;
   color: #fff;
-	font-family: 'Lato', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 .top {
@@ -12,21 +12,22 @@ body, html{
 	text-align: center;
 	text-transform: uppercase;
 	border-bottom: 0.05em solid #8dd6d4;
-	padding: 0.5em;
+	padding-bottom: 0.25em;
+	font-size: .8em;
 }
 .container{
   display: block;
   position: absolute;
   margin: auto;
-  height: 30em;
-  width: 60em;
-  bottom: 0; left:0; right: 0; top:0;
+  height: auto;
+  width: 70em;
+  bottom: 0; left:0; right: 0; top:2em;
   padding: 0;
 }
 
 h1 {
-	color: #fff;
-	font-weight: normal;
+	font-weight: bolder;
+	font-size: 3em;
 }
 
 .container ul{
@@ -116,6 +117,13 @@ input[type=radio]:checked ~ label{
 
 input[type=submit] {
 	background-color: #fff;
-	border-radius: 6px;
-	color: #000;
+	border-radius: 40px;
+	color: #70ba8c;
+	font-weight: bold;
+	font-size: 1.5em;
+	text-transform: uppercase;
+	height: 3em;
+	width: 8em;
+	border: 0;
+	box-shadow: 1px 10px 20px 0px rgba(0,0,0,0.25);
 }

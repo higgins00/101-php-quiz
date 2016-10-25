@@ -19,7 +19,7 @@
 
 	<div class="score">
 		<?php 
-			echo $username . "'s current score is " . $current_score;
+			echo $user . "'s current score is " . $current_score;
 		?>
 	</div>
 

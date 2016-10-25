@@ -3,13 +3,12 @@
 	include 'quiz.php';
 
 	$user = $_GET['user'];
+
 	$current_score = 0;
 
 	if ($_GET["answer"] == $answers[1]) {
 		$current_score += 1;
 	}
-
-
 
 ?>
 
@@ -20,28 +19,43 @@
 	<link rel="stylesheet" type="text/css" href="classy.css">
 </head>
 <body>
-<div class="top">Question 1 of 5</div>
-
+<div class="top">4 Questions</div>
 	<div class="score">
 		<?php 
 			echo $user . ", your current score is " . $current_score;
 		?>
 	</div>
 
-	<div class="question">
+	<div class="container">	
 		<?php echo $quiz[2]; ?>
-	</div>
-
-	<div class="answer">
 		<form action="question3.php">
-			<input type="radio" name="answer" value="A">A<br>
-			<input type="radio" name="answer" value="B">B<br>
-			<input type="radio" name="answer" value="C">C<br>
-			<input type="radio" name="answer" value="D">D<br>
+	<ul>
+		<li>
+    		<input type="radio" id="a-option" name="answer" value="A">
+    		<label for="a-option">Venezula</label>
+    		<div class="check"></div>
+ 		 </li>
+		<li>
+			<input type="radio" id="b-option" name="answer" value="B">
+			<label for="b-option">Bolivia</label>
+			<div class="check"></div>
+		</li>
+		<li>
+			<input type="radio" id="c-option" name="answer" value="C">
+			<label for="c-option">Argentina</label>
+			<div class="check" value="C"></div>
+		</li>
+		<li>			
+			<input type="radio" id="d-option" name="answer" value="D">
+			<label for="d-option">Chile</label>
+			<div class="check"></div>
+		</li>
+		</ul>
+		
 			<input type="submit" value="Next Question">
 
-			<input type="hidden" name="current_score" value="<?php echo $current_score ; ?>">
 			<input type="hidden" name="user" value="<?php echo $user ; ?>">
+			<input type="hidden" name="current_score" value="<?php echo $current_score ; ?>">
 		</form>
 	</div>
 

@@ -12,18 +12,33 @@
 	<link rel="stylesheet" type="text/css" href="classy.css">
 </head>
 <body>
-<div class="top">Question 1 of 5</div>
+	<div class="top">5 Questions</div>
 
-	<div class="question">
+	<div class="container">	
 		<?php echo $quiz[1]; ?>
-	</div>
-
-	<div class="answer">
 		<form action="question2.php">
-			<input type="radio" name="answer" value="A">Rodin's "The Thinker"<br>
-			<input type="radio" name="answer" value="B">Michalangelo's "David"<br>
-			<input type="radio" name="answer" value="C">"Venus de Milo"<br>
-			<input type="radio" name="answer" value="D">The Lincoln statue in the Lincoln Memorial<br>
+	<ul>
+		<li>
+    		<input type="radio" id="a-option" name="selector" value="A">
+    		<label for="a-option">Rodin's "The Thinker"</label>
+    		<div class="check"></div>
+ 		 </li>
+		<li>
+			<input type="radio" id="b-option" name="selector" value="B">
+			<label for="b-option">Michalangelo's "David"</label>
+			<div class="check"></div>
+		</li>
+		<li>
+			<input type="radio" id="c-option" name="selector" value="C">
+			<label for="c-option">"Venus de Milo"</label>
+			<div class="check"></div>
+		</li>
+		<li>			
+			<input type="radio" id="d-option" name="selector" value="D">
+			<label for="d-option">The Lincoln statue in the Lincoln Memorial</label>
+			<div class="check"></div>
+		</li>
+		</ul>
 		
 			<input type="submit" value="Next Question">
 			<input type="hidden" name="user" value="<?php echo $user ; ?>">

@@ -17,8 +17,10 @@
 <html>
 <head>
 	<title></title>
+	<link rel="stylesheet" type="text/css" href="classy.css">
 </head>
 <body>
+<div class="top">Question 1 of 5</div>
 
 	<div class="score">
 		<?php 

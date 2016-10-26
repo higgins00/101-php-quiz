@@ -1,6 +1,7 @@
 <?php
-
 	include 'quiz.php';
+
+	$user = $_GET['user'];
 
 	$current_score = $_GET["current_score"];
 
@@ -14,31 +15,48 @@
 <html>
 <head>
 	<title></title>
+	<link rel="stylesheet" type="text/css" href="classy.css">
 </head>
 <body>
-
+<div class="top">1 Question</div>
 	<div class="score">
 		<?php 
-			echo "Your current score is " . $current_score;
+			echo $user . ", your current score is " . $current_score;
 		?>
 	</div>
+	<div class="container">
 
-	<div class="question">
-		<?php echo $quiz[5]; ?>
-	</div>
-
-	<div class="answer">
+		<h1><?php echo $quiz[5]; ?></h1>
 		<form action="finalresult.php">
-			<input type="radio" name="answer" value="A">A<br>
-			<input type="radio" name="answer" value="B">B<br>
-			<input type="radio" name="answer" value="C">C<br>
-			<input type="radio" name="answer" value="D">D<br>
-			<input type="submit" value="Next Question">
+	<ul>
+		<li>
+    		<input type="radio" id="a-option" name="answer" value="A">
+    		<label for="a-option">Not this one</label>
+    		<div class="check"></div>
+ 		 </li>
+		<li>
+			<input type="radio" id="b-option" name="answer" value="B">
+			<label for="b-option">Still not this one</label>
+			<div class="check"></div>
+		</li>
+		<li>
+			<input type="radio" id="c-option" name="answer" value="C">
+			<label for="c-option">2</label>
+			<div class="check" value="C"></div>
+		</li>
+		<li>			
+			<input type="radio" id="d-option" name="answer" value="D">
+			<label for="d-option">You've gone to far, go back up one</label>
+			<div class="check"></div>
+		</li>
+		</ul>
+		
+			<input type="submit" value="Next">
 
+			<input type="hidden" name="user" value="<?php echo $user ; ?>">
 			<input type="hidden" name="current_score" value="<?php echo $current_score ; ?>">
 		</form>
 	</div>
-
 
 </body>
 </html>

@@ -1,6 +1,6 @@
 <?php
-
 	include 'quiz.php';
+
 	$user = $_GET['user'];
 
 ?>
@@ -13,8 +13,8 @@
 </head>
 <body>
 	<div class="top">5 Questions</div>
-
-		<?php echo $quiz[1]; ?>
+	<div class="container">	
+		<h1><?php echo $quiz[1]; ?></h1>
 		<form action="question2.php">
 	<ul>
 		<li>
@@ -38,10 +38,12 @@
 			<div class="check"></div>
 		</li>
 		</ul>
-		
+		<div class="nextBtn">
 			<input type="submit" value="Next">
 			<input type="hidden" name="user" value="<?php echo $user ; ?>">
+		</div>
 		</form>
+		</div>
 
 </body>
 </html>

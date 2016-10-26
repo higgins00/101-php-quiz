@@ -1,5 +1,4 @@
 <?php
-
 	include 'quiz.php';
 
 	$user = $_GET['user'];
@@ -9,7 +8,6 @@
 	if ($_GET["answer"] == $answers[1]) {
 		$current_score += 1;
 	}
-
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +25,7 @@
 	</div>
 
 	<div class="container">	
-		<?php echo $quiz[2]; ?>
+		<h1><?php echo $quiz[2]; ?></h1>
 		<form action="question3.php">
 	<ul>
 		<li>
@@ -52,7 +50,7 @@
 		</li>
 		</ul>
 		
-			<input type="submit" value="Next Question">
+			<input type="submit" value="Next">
 
 			<input type="hidden" name="user" value="<?php echo $user ; ?>">
 			<input type="hidden" name="current_score" value="<?php echo $current_score ; ?>">

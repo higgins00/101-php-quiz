@@ -18,11 +18,6 @@
 </head>
 <body>
 <div class="top">4 Questions</div>
-	<div class="score">
-		<?php 
-			echo $user . ", your current score is " . $current_score;
-		?>
-	</div>
 
 	<div class="container">	
 		<h1><?php echo $quiz[2]; ?></h1>

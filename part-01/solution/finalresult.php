@@ -2,6 +2,8 @@
 
 	include 'quiz.php';
 
+	$user = $_GET['user'];
+
 	$current_score = $_GET["current_score"];
 
 	if ($_GET["answer"] == $answers[5]) {
@@ -14,12 +16,14 @@
 <html>
 <head>
 	<title></title>
+	<link rel="stylesheet" type="text/css" href="classy.css">
 </head>
-<body>
 
-	<div class="final-result">
+<div class="top">5 Questions</div>
+
+	<div class="container">
 		<?php 
-			echo $username .", you've finished the quiz! Your final score is " . $current_score . " out of 5.";
+			echo $user .", you've finished the quiz! Your final score is " . $current_score . " out of 5.";
 		?>
 	</div>
 

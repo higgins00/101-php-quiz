@@ -10,10 +10,9 @@
 
 <div class="container">	
 <h1>The Mega Random Awesome Quiz</h1>
-	
-<p>First let's get your name:</p>
+<h2>Do you think you are the master of random knowledge?</h2>
 <form action="question1.php">
-<input type="text" name="user">
+<p>First what's your name?</p><input type="text" name="user">
 <p align="center">
 <input type="submit" value="Start">
 </p>
